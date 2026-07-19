@@ -1,26 +1,21 @@
 #!/usr/bin/env bash
 
-## Author : Aditya Shakya (adi1090x)
-## Github : @adi1090x
-#
-## Rofi   : Power Menu
-
 # Current Theme
-dir="$HOME/.config/rofi/powermenu"
-theme='menu'
+dir="$HOME/.config/rofi/powermenu/type-2"
+theme='style-5'
 
 # CMDs
 uptime="`uptime -p | sed -e 's/up //g'`"
-host=`hostname`
+# host=`hostname`
 
 # Options
 shutdown=''
-reboot=''
-lock=''
-suspend=''
-logout=''
-yes=''
-no=''
+reboot=''
+lock='󰌾'
+suspend='󰒲'
+logout='󰍃'
+yes=''
+no=''
 
 # Rofi CMD
 rofi_cmd() {
@@ -32,10 +27,15 @@ rofi_cmd() {
 
 # Confirmation CMD
 confirm_cmd() {
-	rofi -dmenu \
+	rofi -theme-str 'window {location: center; anchor: center; fullscreen: false; width: 350px;}' \
+		-theme-str 'mainbox {children: [ "message", "listview" ];}' \
+		-theme-str 'listview {columns: 2; lines: 1;}' \
+		-theme-str 'element-text {horizontal-align: 0.5;}' \
+		-theme-str 'textbox {horizontal-align: 0.5;}' \
+		-dmenu \
 		-p 'Confirmation' \
 		-mesg 'Are you Sure?' \
-		-theme ${dir}/shared/confirm.rasi
+		-theme ${dir}/${theme}.rasi
 }
 
 # Ask for confirmation
@@ -67,10 +67,12 @@ run_cmd() {
 				bspc quit
 			elif [[ "$DESKTOP_SESSION" == 'i3' ]]; then
 				i3-msg exit
-			elif [[ "$DESKTOP_SESSION" == 'sway' ]]; then
-                sway exit
 			elif [[ "$DESKTOP_SESSION" == 'plasma' ]]; then
 				qdbus org.kde.ksmserver /KSMServer logout 0 0 0
+			elif [[ "$DESKTOP_SESSION" == "xfce" ]]; then
+				killall xfce4-session
+			elif [[ "$DESKTOP_SESSION" == "hyprland" ]]; then
+				killall Hyprland
 			fi
 		fi
 	else
@@ -88,13 +90,7 @@ case ${chosen} in
 		run_cmd --reboot
         ;;
     $lock)
-		if [[ -x '/usr/bin/betterlockscreen' ]]; then
-			betterlockscreen -l
-		elif [[ -x '/usr/bin/i3lock' ]]; then
-			i3lock
-        elif [[ -x '/usr/bin/swaylock' ]]; then
-            swaylock
-		fi
+		swaylock
         ;;
     $suspend)
 		run_cmd --suspend
