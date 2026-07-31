@@ -30,19 +30,19 @@ window#waybar.hidden {
   padding: 6px 18px;
   margin: 6px 3px;
   border-radius: 4px;
-  background-color: #1e1e2e;
+  background-color: rgba(1, 4, 0, .9);
   color: #FFFBFC;
 }
 
 #workspaces button.active {
-  color: #1e1e2e;
+  color: rgba(1, 4, 0, .9);
   background-color: #094074;
 }
 
 #workspaces button:hover {
   box-shadow: inherit;
   text-shadow: inherit;
-  color: #1e1e2e;
+  color: rgba(1, 4, 0, .9);
   background-color: #2558E3;
 }
 
@@ -61,7 +61,7 @@ window#waybar.hidden {
   border-radius: 12px;
   margin: 6px 3px;
   padding: 6px 12px;
-  background-color: #1e1e2e;
+  background-color: rgba(1, 4, 0, .9);
   color: #FFFBFC;
 }
 
@@ -99,7 +99,7 @@ window#waybar.hidden {
 }
 
 #clock {
-  font-family: JetBrainsMono Nerd Font;
+  font-family: 'JetBrainsMono Nerd Font';
 }
 
 tooltip {
