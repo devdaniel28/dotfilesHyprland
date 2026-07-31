@@ -1,0 +1,72 @@
+:root {
+  --background-clr: rgba(1, 4, 0, .45);
+  --border-clr: 1px solid #353535;
+
+  --text-color: #FFFBFC;
+  --text-font: 'JetBrains Mono Ned Fonts';
+}
+
+/** Estilo geral do painel de notificações */
+.control-center {
+    background-color: var(--background-clr);
+    color: #cdd6f4;
+    border-radius: 12px;
+    border: var(--border-clr);
+}
+
+/** Título do painel (ex: "Centro de Notificações") */
+.widget-title {
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: var(--text-font);
+
+    margin: 10px;
+}
+
+/** Botão de "Limpar Tudo" */
+.widget-title button {
+  color: #11111b;
+  font-family: var(--text-font);
+
+  background: #f38ba8;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+
+/** Estilo de cada card de notificação individual */
+.notification {
+    background-color: var(--background-clr);
+    border-radius: 8px;
+    margin: 1px;
+    padding: 1rem;
+}
+
+/** Título e corpo da notificação */
+.notification-content .summary {
+    color: #1793d1; /* Cor do título do app/mensagem */
+    font-weight: bold;
+    font-family: var(--text-font);
+}
+
+.notification-content .body {
+    color: #a6adc8; /* Cor do texto da mensagem */
+    font-family: var(--text-font);
+}
+
+.image {
+  height: 40px;
+  width: 40px;
+
+  margin-right: 12px;
+  margin-left: 15px;
+
+  border-radius: 12px;
+  padding: 0;
+}
+
+/** Botão de fechar (X) da notificação */
+.close-button {
+    background: transparent;
+    color: #f38ba8;
+}

@@ -33,8 +33,13 @@ Antes de clonar e aplicar os dotfiles, certifique-se de ter os pacotes principai
 1. Dependências Básicas (Exemplo para Arch Linux)
 Bash
 ```shell
- sudo pacman -S hyprland kitty rofi waybar
+ sudo pacman -S hyprland kitty wofi waybar cava wlogout swaync waypaper 
+
+ # Or use
+
+ yay -S hyprland kitty wofi waybar cava wlogout swaync waypaper
 ```
+
 2. Clonando o Repositório
 
 Você pode clonar este repositório diretamente na sua pasta home ou gerenciar usando uma ferramenta como o stow.

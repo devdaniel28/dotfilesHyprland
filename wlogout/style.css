@@ -1,0 +1,46 @@
+window {
+    background-color: rgba(30, 30, 46, .35);
+}
+
+button {
+    margin: 1rem;
+
+    color: #FFFBFC;
+    font-size: 15pt;
+    font-weight: 600;
+
+    background: rgba(0, 31, 84, .8);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+
+    border-radius: 12px;
+    border: none;
+    box-shadow: none;
+}
+
+button:focus {
+    background: #1793d1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30%;
+}
+
+#lock {
+    background-image: url("/home/dvcdaniel/.config/wlogout/icons/lock.png");
+}
+#logout {
+    background-image: url("/home/dvcdaniel/.config/wlogout/icons/logout.png");
+}
+#suspend {
+    background-image: url("/home/dvcdaniel/.config/wlogout/icons/suspend.png");
+}
+#hibernate {
+    background-image: url("/home/dvcdaniel/.config/wlogout/icons/hibernate.png");
+}
+#reboot {
+    background-image: url("/home/dvcdaniel/.config/wlogout/icons/reboot.png");
+}
+#shutdown {
+    background-image: url("/home/dvcdaniel/.config/wlogout/icons/shutdown.png");
+}
