@@ -35,13 +35,18 @@ Antes de clonar e aplicar os dotfiles, certifique-se de ter os pacotes principai
 
 ### 1. Dependências Básicas (Exemplo no Arch Linux)
 
-```bash
+```sh
 # Via Pacman
 sudo pacman -S hyprland hypridle hyprlock hyprsunset kitty cava
 
-# Via AUR Helper (yay/paru) para o Brain Shell e pacotes adicionais
-yay -S hyprland hypridle hyprlock hyprsunset kitty cava brain-shell
+# Via AUR Helper (yay/paru)
+yay -S hyprland hypridle hyprlock hyprsunset kitty cava
 
+```
+
+```sh
+    # Instalação do Brain_shell (segundo a doc oficial)
+    curl -fsSL https://raw.githubusercontent.com/Brainitech/Brain_Shell/refs/heads/main/install.sh | bash
 ```
 
 ---
@@ -50,7 +55,7 @@ yay -S hyprland hypridle hyprlock hyprsunset kitty cava brain-shell
 
 Você pode clonar este repositório diretamente na sua pasta pessoal e criar os links simbólicos (symlinks) para a pasta `~/.config`.
 
-```bash
+```sh
 # Clone o repositório
 git clone [https://github.com/devdaniel/dotfilesHyprland.git](https://github.com/devdaniel/dotfilesHyprland.git) ~/dotfiles
 
